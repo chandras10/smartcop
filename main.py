@@ -27,19 +27,19 @@ def start():
     motor.forward(500)
     sleep(3.4)
 
-    motor.right(500)
+    motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
     sleep(3.4)
 
-    motor.right(500)
+    motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
     sleep(3.4)
 
-    motor.right(500)
+    motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
