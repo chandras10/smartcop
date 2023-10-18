@@ -31,8 +31,15 @@ def start():
     motor.right(800)
     sleep(2.5)
     
-if __name__ == __main__:
+    motor.brake()
+    motor.stop()
+    motor.standby()
+
+    
+if __name__ == '__main__':
     start()
+
+
 
 
 
