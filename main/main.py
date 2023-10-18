@@ -31,7 +31,7 @@ print("moving forward!!!!")
 motor.forward(500)
 sleep(5)
 
-print("moving backward")
+print("moving right")
 motor.right(800)
 sleep(2.5)
 
