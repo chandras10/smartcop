@@ -3,7 +3,6 @@ from machine import Pin, PWM
 from time import sleep
 from TB6612FNG import Motor
 
-from micropython_ota_updater.app.ota_updater import OTAUpdater
 import config
 
 frequency = 50
@@ -23,60 +22,17 @@ ofsetB = 1
 motor = Motor(BIN2,BIN1,STBY,AIN1,AIN2,PWMA,PWMB,ofsetA,ofsetB)
 
 
-def download_and_install_update_if_available():
-    ota_updater = OTAUpdater('https://github.com/chandras10/smartcop')
-    ota_updater.install_update_if_available_after_boot(config.wifi['SSID'], config.wifi['PASSWD'])
+def start():
+    print("moving forward!!!!")
+    motor.forward(500)
+    sleep(5)
 
-
-print("moving forward!!!!")
-motor.forward(500)
-sleep(5)
-
-print("moving right")
-motor.right(800)
-sleep(2.5)
-
-#print("moving forward")
-#motor.forward(500)
-#sleep(10)
-
-#print("moving right")
-#motor.right(500)
-#sleep(4)
-
-#print("moving forward")
-#motor.forward(500)
-#sleep(10)
-
-#print("moving right")
-#motor.right(500)
-#sleep(4)
-
-#print("moving forward")
-#motor.forward(500)
-#sleep(10)
-
-#motor.backward(600)
-#sleep(10)
-
-#print("moving right")
-#motor.right(700)
-#sleep(10)
-
-#motor.left(800)
-#sleep(10)
-
-motor.brake()
-sleep(5)
-
-motor.stop()
-sleep(5)
-
-motor.standby()
-sleep(5)
-
-motor.run()
-sleep(5)
+    print("moving right")
+    motor.right(800)
+    sleep(2.5)
+    
+if __name__ == __main__:
+    start()
 
 
 
