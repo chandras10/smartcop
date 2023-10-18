@@ -3,6 +3,8 @@ from machine import Pin, PWM
 from time import sleep
 from TB6612FNG import Motor
 
+from micropython_ota_updater.app.ota_updater import OTAUpdater
+
 frequency = 50
 
 PWMB = 15
@@ -20,11 +22,12 @@ ofsetB = 1
 motor = Motor(BIN2,BIN1,STBY,AIN1,AIN2,PWMA,PWMB,ofsetA,ofsetB)
 
 
-#print("moving forward")
-#motor.right(800)
-#sleep(60)
+def download_and_install_update_if_available():
+    ota_updater = OTAUpdater('https://github.com/chandras10/smartcop')
+    ota_updater.download_and_install_update_if_available('Guest', 'BrokenWires@@2019')
 
-print("moving forward")
+
+print("moving forward!!!!")
 motor.forward(500)
 sleep(5)
 
