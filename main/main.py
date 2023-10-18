@@ -4,6 +4,7 @@ from time import sleep
 from TB6612FNG import Motor
 
 from micropython_ota_updater.app.ota_updater import OTAUpdater
+import config
 
 frequency = 50
 
@@ -24,7 +25,7 @@ motor = Motor(BIN2,BIN1,STBY,AIN1,AIN2,PWMA,PWMB,ofsetA,ofsetB)
 
 def download_and_install_update_if_available():
     ota_updater = OTAUpdater('https://github.com/chandras10/smartcop')
-    ota_updater.download_and_install_update_if_available('Guest', 'BrokenWires@@2019')
+    ota_updater.install_update_if_available_after_boot(config.wifi['SSID'], config.wifi['PASSWD'])
 
 
 print("moving forward!!!!")

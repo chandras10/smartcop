@@ -1,1 +1,3 @@
 sphero/.idea
+venv
+main/config.py
