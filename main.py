@@ -27,10 +27,14 @@ def start():
     motor.forward(500)
     sleep(5)
 
-    print("moving left modified sfkjdsfjlksd ")
+    print("moving left")
     motor.right(800)
     sleep(3)
-    
+
+    print("moving forward")
+    motor.forward(800)
+    sleep(5)
+
     motor.brake()
     motor.stop()
     motor.standby()
