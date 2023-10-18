@@ -27,7 +27,7 @@ def start():
     motor.forward(500)
     sleep(5)
 
-    print("moving left")
+    print("moving left modified sfkjdsfjlksd ")
     motor.right(800)
     sleep(3)
     
