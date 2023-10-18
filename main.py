@@ -31,11 +31,9 @@ def start():
     motor.right(800)
     sleep(3)
 
-    """
     print("moving forward")
     motor.forward(800)
     sleep(5)
-    """
 
     motor.brake()
     motor.stop()
