@@ -25,25 +25,25 @@ motor = Motor(BIN2,BIN1,STBY,AIN1,AIN2,PWMA,PWMB,ofsetA,ofsetB)
 def start():
     print("moving forward!!!!")
     motor.forward(500)
-    sleep(3.4)
+    sleep(6)
 
     motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
-    sleep(3.4)
+    sleep(1.4)
 
     motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
-    sleep(3.4)
+    sleep(6)
 
     motor.right(450)
     sleep(1.70)
 
     motor.forward(500)
-    sleep(3.4)
+    sleep(1.4)
 
     motor.brake()
     motor.stop()
